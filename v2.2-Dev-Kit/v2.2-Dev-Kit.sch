@@ -1,0 +1,196 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	8000 3200 8000 3600
+Connection ~ 8000 3600
+$Comp
+L Switch:SW_Push SW2
+U 1 1 6107FC58
+P 7800 3600
+F 0 "SW2" H 7800 3885 50  0001 C CNN
+F 1 "Down" H 7800 3794 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_FSMSM" H 7800 3800 50  0001 C CNN
+F 3 "~" H 7800 3800 50  0001 C CNN
+	1    7800 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 6107F0D4
+P 7800 3200
+F 0 "SW1" H 7800 3485 50  0001 C CNN
+F 1 "Up" H 7800 3394 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_FSMSM" H 7800 3400 50  0001 C CNN
+F 3 "~" H 7800 3400 50  0001 C CNN
+	1    7800 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 4000 8000 4450
+Wire Wire Line
+	8000 3600 8000 4000
+Connection ~ 8000 4000
+$Comp
+L Switch:SW_Push SW3
+U 1 1 610800B0
+P 7800 4000
+F 0 "SW3" H 7800 4285 50  0001 C CNN
+F 1 "Left" H 7800 4194 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_FSMSM" H 7800 4200 50  0001 C CNN
+F 3 "~" H 7800 4200 50  0001 C CNN
+	1    7800 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW4
+U 1 1 61080994
+P 7800 4450
+F 0 "SW4" H 7800 4735 50  0001 C CNN
+F 1 "Right" H 7800 4644 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_FSMSM" H 7800 4650 50  0001 C CNN
+F 3 "~" H 7800 4650 50  0001 C CNN
+	1    7800 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 4000 7350 4000
+Text Label 7350 4000 0    50   ~ 0
+D7
+Text Label 7350 4450 0    50   ~ 0
+D5
+Wire Wire Line
+	7600 4450 7350 4450
+$Comp
+L power:GND #PWR0102
+U 1 1 61146F57
+P 8000 4700
+F 0 "#PWR0102" H 8000 4450 50  0001 C CNN
+F 1 "GND" H 8005 4527 50  0000 C CNN
+F 2 "" H 8000 4700 50  0001 C CNN
+F 3 "" H 8000 4700 50  0001 C CNN
+	1    8000 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 4450 8000 4700
+Connection ~ 8000 4450
+Wire Wire Line
+	5000 3150 4650 3150
+Wire Wire Line
+	4650 3150 4650 3500
+Wire Wire Line
+	4300 3500 4650 3500
+Wire Wire Line
+	5000 3250 4550 3250
+Wire Wire Line
+	4550 3250 4550 3400
+Wire Wire Line
+	4550 3400 4300 3400
+Wire Wire Line
+	4300 4100 5000 4100
+Wire Wire Line
+	5000 3350 4750 3350
+Wire Wire Line
+	4750 3350 4750 3800
+Wire Wire Line
+	4750 3800 5300 3800
+Wire Wire Line
+	5000 3450 4850 3450
+Wire Wire Line
+	4750 3350 4750 2750
+Wire Wire Line
+	4750 2750 4000 2750
+Wire Wire Line
+	4000 2750 4000 2900
+Connection ~ 4750 3350
+$Comp
+L LED:WS2812B D1
+U 1 1 6108AA06
+P 5300 4100
+F 0 "D1" H 5644 4146 50  0001 L CNN
+F 1 "WS2812B" H 5644 4055 50  0000 L TNN
+F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_idiot_proof" H 5350 3800 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 5400 3725 50  0001 L TNN
+	1    5300 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCU_Module:WeMos_D1_mini U1
+U 1 1 6107D786
+P 3900 3700
+F 0 "U1" H 3900 2811 50  0001 C CNN
+F 1 "WeMos D1 Mini" H 3900 2720 50  0000 C CNN
+F 2 "wemos-d1-mini:wemos-d1-mini-with-pin-header-and-connector" H 3900 2550 50  0001 C CNN
+F 3 "https://wiki.wemos.cc/products:d1:d1_mini#documentation" H 2050 2550 50  0001 C CNN
+	1    3900 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 4500 4850 4500
+Wire Wire Line
+	5300 4400 5300 4500
+Wire Wire Line
+	4850 3450 4850 4500
+Connection ~ 4850 4500
+Wire Wire Line
+	4850 4500 5300 4500
+$Comp
+L SSD1306-128x64_OLED:SSD1306 Brd1
+U 1 1 6108DD59
+P 5350 3300
+F 0 "Brd1" H 5628 3404 50  0001 L CNN
+F 1 "SH1106" V 5628 3313 50  0000 C CNN
+F 2 "screens:SH1106-128x64-OLED" H 5350 3550 50  0001 C CNN
+F 3 "" H 5350 3550 50  0001 C CNN
+	1    5350 3300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 61192F70
+P 5300 4700
+F 0 "#PWR0103" H 5300 4450 50  0001 C CNN
+F 1 "GND" H 5305 4527 50  0000 C CNN
+F 2 "" H 5300 4700 50  0001 C CNN
+F 3 "" H 5300 4700 50  0001 C CNN
+	1    5300 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 4500 5300 4700
+Connection ~ 5300 4500
+$Comp
+L power:+5V #PWR0104
+U 1 1 61196773
+P 3800 2550
+F 0 "#PWR0104" H 3800 2400 50  0001 C CNN
+F 1 "+5V" H 3815 2723 50  0000 C CNN
+F 2 "" H 3800 2550 50  0001 C CNN
+F 3 "" H 3800 2550 50  0001 C CNN
+	1    3800 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 2550 3800 2900
+Wire Wire Line
+	7600 3200 7350 3200
+Text Label 7350 3200 0    50   ~ 0
+D6
+Text Label 7350 3600 0    50   ~ 0
+D3
+Wire Wire Line
+	7600 3600 7350 3600
+$EndSCHEMATC
